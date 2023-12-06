@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="/assets/js/script.js" defer></script>
     <title>POO</title>
   </head>
   <body>
@@ -53,9 +54,9 @@
                 Mode de livraison<span class="required">*</span>
               </td>
               <td>
-                <select id="delivery-mode">
-                  <option>Relais colis (+5€)</option>
-                  <option>A domicile (+12€)</option>
+                <select id="delivery-mode" onchange="updateTotals()">
+                  <option value="relay">Relais colis (+5€)</option>
+                  <option value="home">A domicile (+12€)</option>
                 </select>
               </td>
               <td></td>
@@ -64,13 +65,15 @@
         </table>
 
         <div class="buttons-container">
-          <button id="add-product-button">Ajouter un produit</button>
+          <button id="add-product-button" onclick="addProduct()">
+            Ajouter un produit
+          </button>
           <span class="info-validate-page">
             <i class="fa-solid fa-circle-info"></i>
             Valider votre panier pour accéder au formulaire de validation
             <i class="fa-solid fa-arrow-right"></i>
           </span>
-          <a href="#"><button id="validate-button">Valider</button></a>
+          <button id="validate-button">Valider</button>
         </div>
       </section>
     </main>
