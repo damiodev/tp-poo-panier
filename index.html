@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POO</title>
+  </head>
+  <body>
+    <header>
+      <h1><span>POO</span></h1>
+    </header>
+    <main>
+      <section>
+        <!-- Tableau du panier-->
+        <h1>Tableau de produits</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Référence du produit</th>
+              <th>Nom du produit</th>
+              <th>Prix unitaire</th>
+              <th>Quantité</th>
+              <th>Prix</th>
+              <th>Supprimer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Lignes du tableau générées dynamiquement -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Total (HT)</td>
+              <td>0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="4">TVA (20%)</td>
+              <td>0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="4">Total (TTC)</td>
+              <td>0</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="4">Mode de livraison<span>*</span></td>
+              <td>
+                <select>
+                  <option>Relais colis (+5€)</option>
+                  <option>A domicile (+12€)</option>
+                </select>
+              </td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div>
+          <button>Ajouter un produit</button>
+          <span>
+            Valider votre panier pour accéder au formulaire de validation
+          </span>
+          <a href="#"><button>Valider</button></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
