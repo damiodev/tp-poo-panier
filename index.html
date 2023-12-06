@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>POO</title>
   </head>
   <body>
@@ -13,7 +18,7 @@
       <section>
         <!-- Tableau du panier-->
         <h1>Tableau de produits</h1>
-        <table>
+        <table id="product-table">
           <thead>
             <tr>
               <th>Référence du produit</th>
@@ -30,23 +35,25 @@
           <tfoot>
             <tr>
               <td colspan="4">Total (HT)</td>
-              <td>0</td>
+              <td id="total-price">0</td>
               <td></td>
             </tr>
             <tr>
               <td colspan="4">TVA (20%)</td>
-              <td>0</td>
+              <td id="total-vat">0</td>
               <td></td>
             </tr>
             <tr>
               <td colspan="4">Total (TTC)</td>
-              <td>0</td>
+              <td id="total-final">0</td>
               <td></td>
             </tr>
             <tr>
-              <td colspan="4">Mode de livraison<span>*</span></td>
+              <td colspan="4">
+                Mode de livraison<span class="required">*</span>
+              </td>
               <td>
-                <select>
+                <select id="delivery-mode">
                   <option>Relais colis (+5€)</option>
                   <option>A domicile (+12€)</option>
                 </select>
@@ -56,12 +63,14 @@
           </tfoot>
         </table>
 
-        <div>
-          <button>Ajouter un produit</button>
-          <span>
+        <div class="buttons-container">
+          <button id="add-product-button">Ajouter un produit</button>
+          <span class="info-validate-page">
+            <i class="fa-solid fa-circle-info"></i>
             Valider votre panier pour accéder au formulaire de validation
+            <i class="fa-solid fa-arrow-right"></i>
           </span>
-          <a href="#"><button>Valider</button></a>
+          <a href="#"><button id="validate-button">Valider</button></a>
         </div>
       </section>
     </main>
